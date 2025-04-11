@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const clientId = "f713f43fd18241209b320123555bdde1"
-const clientSecret = "4ff7e1279bf84f98b3fe5d8442b75cbe"
+const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID
+const clientSecret = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET
 
 export const getSpotifyToken = async () => {
     const authString = `${clientId}:${clientSecret}`
